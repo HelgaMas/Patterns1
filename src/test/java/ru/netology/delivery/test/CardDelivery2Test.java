@@ -30,7 +30,7 @@ public class CardDelivery2Test {
         var daysToAddForSecondMeeting = 7;
         var secondMeetingDate = DataGenerator.generateDate(daysToAddForSecondMeeting);
 
-        $x("[//*[@placeholder=\"Город\"]]").setValue(DataGenerator.generateCity("ru"));
+        $("[data-test-id=\"city\"]").setValue(DataGenerator.generateCity("ru"));
         $("[data-test-id='date'] input").sendKeys(Keys.chord(Keys.SHIFT, Keys.HOME), Keys.BACK_SPACE);
         $x("//*[@name=\"name\"]").setValue(DataGenerator.generateName("ru"));
         $x("//*[@name=\"phone\"]").setValue(DataGenerator.generatePhone("ru"));
