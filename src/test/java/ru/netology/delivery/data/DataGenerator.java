@@ -17,12 +17,7 @@ public class DataGenerator {
 
     //private DataGenerator() {
     //}
-    private static Faker faker;
-
-    @BeforeEach
-    void setUpAll() {
-        faker = new Faker(new Locale("ru"));
-    }
+    private static Faker faker = new Faker(new Locale("ru"));;
 
     public static String generateDate(int shift) {
         String date = LocalDate.now().plusDays(shift).format(DateTimeFormatter.ofPattern("dd.MM.yyyy"));
