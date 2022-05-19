@@ -15,8 +15,6 @@ import java.util.Random;
 @UtilityClass
 public class DataGenerator {
 
-    //private DataGenerator() {
-    //}
     private static Faker faker = new Faker(new Locale("ru"));;
 
     public static String generateDate(int shift) {
@@ -30,8 +28,10 @@ public class DataGenerator {
     }
 
     public static String generateName(String locale) {
-        String name = faker.name().fullName();
-        return name;
+        String name = faker.name().firstName();
+        String surname = faker.name().lastName();
+        String fullName = name + " " + surname;
+        return fullName;
     }
 
     public static String generatePhone(String locale) {
